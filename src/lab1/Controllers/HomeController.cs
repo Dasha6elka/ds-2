@@ -35,7 +35,7 @@ namespace lab1.Controllers
             using var channel = GrpcChannel.ForAddress("http://localhost:5000");
             var client = new Job.JobClient(channel);
             var reply = await client.RegisterAsync(
-                              new RegisterRequest { Description = "This is job" });
+                              new RegisterRequest { Description = description });
             return View("Task", new ViewModel { RequestId = reply.Id });
         }
 
