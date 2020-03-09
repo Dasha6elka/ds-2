@@ -1,0 +1,3 @@
+set PORT_API=5000
+set PORT_CLIENT=8000
+set HOST=api

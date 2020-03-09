@@ -32,7 +32,7 @@ namespace lab1.Controllers
         [HttpPost]
         public async Task<IActionResult> GetID(string description)
         {
-            using var channel = GrpcChannel.ForAddress("http://localhost:5000");
+            using var channel = GrpcChannel.ForAddress("http://" + Environment.GetEnvironmentVariable("HOST") + ":5000");
             var client = new Job.JobClient(channel);
             var reply = await client.RegisterAsync(
                               new RegisterRequest { Description = description });
