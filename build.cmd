@@ -1,5 +1,5 @@
-docker build -f buildApi.dockerfile -t api:%1 .
-docker build -f buildClient.dockerfile -t client:%1 .
+docker build -f api.dockerfile -t api:%1 .
+docker build -f client.dockerfile -t client:%1 .
 
 mkdir application%1
 

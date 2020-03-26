@@ -3,11 +3,11 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using lab1.Models;
+using Client.Models;
 using Grpc.Net.Client;
 using BackendApi;
 
-namespace lab1.Controllers
+namespace Client.Controllers
 {
     public class HomeController : Controller
     {
